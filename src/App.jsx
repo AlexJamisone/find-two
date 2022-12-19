@@ -10,14 +10,10 @@ const App = () => {
 	const [flippedCards, setFlippedCards] = useState([]);
 	const [findCards, setFindCards] = useState([]);
 	const [moves, setMoves] = useState(0);
-	const [gameOver, setgameOver] = useState(false);
+	const [gameOver, setGameOver] = useState(false);
 
 	useEffect(() => {
-		if (theme === 'dark') {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
+		document.documentElement.classList.toggle('dark');
 	}, [theme]);
 
 	useEffect(() => {
@@ -26,7 +22,7 @@ const App = () => {
 
 	useEffect(() => {
 		if (findCards.length > 0 && findCards.length === boardData.length) {
-			setgameOver(true);
+			setGameOver(true);
 		}
 	}, [moves]);
 
@@ -35,17 +31,16 @@ const App = () => {
 	};
 
 	const initializeGame = () => {
-		shuhhle();
+		shuffle();
 		setFlippedCards([]);
 		setFindCards([]);
 		setMoves(0);
-		setgameOver(false);
+		setGameOver(false);
 	};
 
-	const shuhhle = () => {
+	const shuffle = () => {
 		const shuffledCards = [...board_icons, ...board_icons]
 			.sort(() => Math.random() - 0.5)
-			.map((v) => v);
 		setBoardData(shuffledCards);
 	};
 
@@ -93,7 +88,7 @@ const App = () => {
 							? 'rotateY(180deg)'
 							: '';
 						const found = findCards.includes(index)
-							? 'rotateY(180deg) bg-emerald-400'
+							? 'rotateY(180deg)'
 							: '';
 						return (
 							<div
@@ -115,7 +110,7 @@ const App = () => {
 									{data}
 								</div>
 								<div
-									className={`absolute left-0 top-0 w-full h-full bg-slate-300  dark:${found} transition-all rounded-full ${found}`}
+									className={`absolute left-0 top-0 w-full h-full bg-slate-300 transition-all rounded-full ${found ? 'bg-emerald-400' : ''}`}
 								></div>
 							</div>
 						);
