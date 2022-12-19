@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/find-two/static/css/main.533fb4b5.css",
-    "main.js": "/find-two/static/js/main.d58865fb.js",
-    "index.html": "/find-two/index.html",
-    "main.533fb4b5.css.map": "/find-two/static/css/main.533fb4b5.css.map",
-    "main.d58865fb.js.map": "/find-two/static/js/main.d58865fb.js.map"
+    "main.css": "/static/css/main.533fb4b5.css",
+    "main.js": "/static/js/main.d58865fb.js",
+    "index.html": "/index.html",
+    "main.533fb4b5.css.map": "/static/css/main.533fb4b5.css.map",
+    "main.d58865fb.js.map": "/static/js/main.d58865fb.js.map"
   },
   "entrypoints": [
     "static/css/main.533fb4b5.css",
