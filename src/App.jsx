@@ -66,7 +66,7 @@ const App = () => {
 		<div className="bg-slate-50 h-screen dark:bg-slate-700 dark:transition-all duration-300">
 			<header className="flex flex-col p-5 bg-slate-200 dark:bg-slate-700">
 				<h1 className="text-center font-unb text-3xl text-slate-500 dark:text-slate-50">
-					Find Two Game
+					Find Two Cards
 				</h1>
 				<div className="flex justify-center  m-5 items-center w-auto font-unb text-slate-500 dark:text-slate-50">
 					<button
